@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌿 Energía de Biomasa - El Poder de lo Orgánico</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>🌿 Energía de Biomasa: Recurso Natural y Versátil</h1>
+        <p>Aprovechando la materia orgánica residual para generar calor y electricidad de forma sostenible.</p>
+    </header>
+    
+
+[Image of a biomass power plant process diagram]
+
+
+    <nav class="navbar">
+        <a href="#dashboard">Dashboard Global</a>
+        <a href="#tabla-datos">Datos Históricos</a>
+        <a href="#calculadora">Calculadora de Consumo</a>
+    </nav>
+
+    <main class="container">
+
+        <section id="dashboard" class="content-section">
+            <h2>📊 Dashboard Global de Energías Renovables (1965-2022)</h2>
+            <p>Visualización integral de la producción y la tendencia histórica global.</p>
+            
+            <div class="dashboard-grid">
+                
+                <div class="chart-container">
+                    <h3>Producción por Fuente (Último Año)</h3>
+                    <canvas id="chart-barras"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <h3>Participación en el Consumo Eléctrico</h3>
+                    <canvas id="chart-torta"></canvas>
+                </div>
+
+                <div class="chart-container full-width">
+                    <h3>Tendencia en Capacidad Instalada (Global)</h3>
+                    <canvas id="chart-lineas"></canvas>
+                </div>
+                
+                <div class="chart-container full-width">
+                    <h3>Consumo de Renovables vs. Convencional</h3>
+                    <canvas id="chart-area"></canvas>
+                </div>
+                
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="tabla-datos" class="content-section">
+            <h2>🌎 Datos Históricos Globales (1965-2022)</h2>
+            <div class="table-actions">
+                <label for="filtro-year">Filtrar por Año (Global):</label>
+                <input type="number" id="filtro-year" min="1965" max="2022" placeholder="Ej: 2020">
+                <button onclick="filtrarTabla()">Aplicar Filtro</button>
+                <button onclick="cargarTablaCompleta()">Mostrar Todos</button>
+            </div>
+            <div class="table-responsive">
+                <table id="datos-historicos-tabla">
+                    <thead>
+                        </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="calculadora" class="content-section">
+            <h2>🧮 Calculadora de Energía Renovable en el Consumo</h2>
+            <p>Estima el porcentaje de energía renovable en tu consumo eléctrico, basándose en las tasas globales de capacidad instalada y producción.</p>
+            <form id="calculadora-form">
+                <div class="form-group">
+                    <label for="consumo-total">Consumo Eléctrico Total (kWh/año):</label>
+                    <input type="number" id="consumo-total" min="1" step="any" required placeholder="Ej: 3000">
+                </div>
+                <div class="form-group">
+                    <label for="capacidad-total">Capacidad Total Renovable Global (TWh):</label>
+                    <input type="number" id="capacidad-total" disabled>
+                </div>
+                <button type="submit" class="btn">Calcular Proporción</button>
+            </form>
+            
+            <div id="resultado-calculadora" class="resultado">
+                </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
