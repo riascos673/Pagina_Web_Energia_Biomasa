@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,17 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
+
 <body>
 
     <header class="hero">
         <h1>🌿 Energía de Biomasa: Recurso Natural y Versátil</h1>
         <p>Aprovechando la materia orgánica residual para generar calor y electricidad de forma sostenible.</p>
+        <img src="assets/biomass-plant.png" alt="Planta de energía de biomasa" class="hero-image">
     </header>
-    
 
-[Image of a biomass power plant process diagram]
+
+    [Image of a biomass power plant process diagram]
 
 
     <nav class="navbar">
@@ -29,9 +32,9 @@
         <section id="dashboard" class="content-section">
             <h2>📊 Dashboard Global de Energías Renovables (1965-2022)</h2>
             <p>Visualización integral de la producción y la tendencia histórica global.</p>
-            
+
             <div class="dashboard-grid">
-                
+
                 <div class="chart-container">
                     <h3>Producción por Fuente (Último Año)</h3>
                     <canvas id="chart-barras"></canvas>
@@ -46,12 +49,12 @@
                     <h3>Tendencia en Capacidad Instalada (Global)</h3>
                     <canvas id="chart-lineas"></canvas>
                 </div>
-                
+
                 <div class="chart-container full-width">
                     <h3>Consumo de Renovables vs. Convencional</h3>
                     <canvas id="chart-area"></canvas>
                 </div>
-                
+
             </div>
         </section>
 
@@ -68,9 +71,16 @@
             <div class="table-responsive">
                 <table id="datos-historicos-tabla">
                     <thead>
-                        </thead>
+                        <tr>
+                            <th>Año</th>
+                            <th>Biomasa (TWh)</th>
+                            <th>Solar (TWh)</th>
+                            <th>Eólica (TWh)</th>
+                            <th>Total Renovable (%)</th>
+                        </tr>
+                    </thead>
                     <tbody>
-                        </tbody>
+                    </tbody>
                 </table>
             </div>
         </section>
@@ -79,7 +89,8 @@
 
         <section id="calculadora" class="content-section">
             <h2>🧮 Calculadora de Energía Renovable en el Consumo</h2>
-            <p>Estima el porcentaje de energía renovable en tu consumo eléctrico, basándose en las tasas globales de capacidad instalada y producción.</p>
+            <p>Estima el porcentaje de energía renovable en tu consumo eléctrico, basándose en las tasas globales de
+                capacidad instalada y producción.</p>
             <form id="calculadora-form">
                 <div class="form-group">
                     <label for="consumo-total">Consumo Eléctrico Total (kWh/año):</label>
@@ -91,9 +102,10 @@
                 </div>
                 <button type="submit" class="btn">Calcular Proporción</button>
             </form>
-            
+
             <div id="resultado-calculadora" class="resultado">
-                </div>
+                <p>Completa el formulario y haz clic en "Calcular"</p>
+            </div>
         </section>
 
     </main>
@@ -101,4 +113,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
