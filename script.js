@@ -1,5 +1,5 @@
 // Nombre del archivo CSV
-const CSV_FILE = '02_modern-renewable-energy-cons.csv';
+const CSV_FILE = '02_modern-renewable-energy-consumption.csv';
 let globalData = [];
 let tableData = [];
 let chartInstances = {}; // Para almacenar instancias de Chart.js
